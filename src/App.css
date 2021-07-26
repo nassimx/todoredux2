@@ -46,3 +46,11 @@ h1 {
 .lineTH {
   text-decoration: line-through;
 }
+.task {
+  display: flex;
+  align-items: center;
+}
+.editicon {
+  padding-left: 10px;
+  color: rgb(33, 165, 33);
+}

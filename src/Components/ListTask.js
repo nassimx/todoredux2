@@ -22,9 +22,8 @@ const ListTask = () => {
     return (
         <div className={classes.root}>
             <ButtonGroup variant="contained" color="primary" aria-label="contained primary button group">
-                <Button>Completed</Button>
-                <Button>Not Completed</Button>
-                <Button>Deleted</Button>
+                <Button>Done</Button>
+                <Button>Undone</Button>
             </ButtonGroup>
             <div>
 
