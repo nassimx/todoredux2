@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { Container, Grid } from '@material-ui/core';
+import React from 'react';
 import './App.css';
+import Addtask from './Components/AddTask';
+import ListTask from './Components/ListTask';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div >
+      <Container maxWidth="sm" className="addtask">
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
         >
-          Learn React
-        </a>
-      </header>
+          <Addtask />
+        </Grid >
+        <ListTask />
+      </Container>
+
     </div>
   );
 }
