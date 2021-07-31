@@ -1,8 +1,8 @@
 import { Container, Grid } from '@material-ui/core';
 import React from 'react';
 import './App.css';
-import Addtask from './Components/AddTask';
-import ListTask from './Components/ListTask';
+import Addtask from './Components/Addtask/AddTask';
+import ListTask from './Components/Listtask/ListTask';
 
 function App() {
   return (

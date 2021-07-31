@@ -1,0 +1,11 @@
+.editicon {
+  padding-left: 10px;
+  color: rgb(33, 165, 33);
+}
+.deleteicon {
+  padding-left: 10px;
+  color: red;
+}
+.deleteicon:hover {
+  color: rgb(0, 0, 0);
+}
