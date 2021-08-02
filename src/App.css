@@ -39,7 +39,8 @@ h1 {
 }
 .Done {
   text-decoration: line-through;
-  text-decoration-color: rgb(255, 0, 0);
+  text-decoration-color: rgb(255, 255, 255);
+  opacity: 0.5;
 }
 .task {
   display: flex;

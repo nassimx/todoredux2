@@ -6,6 +6,8 @@ import Fade from '@material-ui/core/Fade';
 import { useDispatch } from 'react-redux'
 import { editTask } from "../../Redux/Action/taskAction";
 import { Button } from '@material-ui/core';
+import EditIcon from '@material-ui/icons/Edit';
+import './Edittask.css'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -43,12 +45,10 @@ const EditTask = ({ item }) => {
         dispatch(editTask(item.id, editedTask))
         handleClose();
     }
-
+    const handleChange = (e) => { setEditedTask(e.target.value) }
     return (
         <div>
-            <button type="button" onClick={handleOpen}>
-                Edit
-            </button>
+            <EditIcon className="editicon" type="button" onClick={handleOpen} />
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
@@ -64,14 +64,15 @@ const EditTask = ({ item }) => {
                 <Fade in={open}>
                     <div className={classes.paper}>
                         <h2 id="transition-modal-title">Edit Task</h2>
-                        <input type="text" onChange={(e) => setEditedTask(e.target.value)} value={editedTask} />
+                        <input type="text" onChange={handleChange}
+                            value={editedTask}
+                            maxlength="30" />
                         <Button type="submit" onClick={handleClose}>
-                            Edit
+                            Close
                         </Button>
                         <Button onClick={edit}>
                             Save Changes
                         </Button>
-
                     </div>
                 </Fade>
             </Modal>
