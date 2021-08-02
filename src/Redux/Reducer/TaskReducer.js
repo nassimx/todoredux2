@@ -4,7 +4,7 @@ const initialState = {
     tabTasks: [{
         id: Math.random(),
         task: "Learn Redux",
-        isDone: false
+        isDone: true
     }, {
         id: Math.random(),
         task: "Learn Mongodb",

@@ -12,15 +12,16 @@ const Task = ({ item }) => {
 
     return (
         <div className="task" >
-            <h2 className={item.isDone ? "Done" : "none"}>
+            <h2 className={item.isDone ? "Done" : null}>
                 {item.task} </h2>
             <Checkbox
                 color="primary"
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
                 onClick={() => dispatch(complete(item.id))}
             />
-            <DeleteIcon className="deleteicon" onClick={() => dispatch(remove(item.id))} />
             <EditTask item={item} />
+            <DeleteIcon className="deleteicon" onClick={() => dispatch(remove(item.id))} />
+
         </div>
     )
 }

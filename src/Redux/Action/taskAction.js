@@ -26,10 +26,10 @@ export const remove = (payload) => {
 };
 
 // payload : id
-export const complete = (payload) => {
+export const complete = (id) => {
     return {
         type: COMPLETE_TASK,
-        payload
+        payload: id
     }
 };
 

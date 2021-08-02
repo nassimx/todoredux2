@@ -13,13 +13,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 }));
-const ListTask = () => {
+const ListTask = ({ filteredTask }) => {
     const classes = useStyles();
 
     const tabTasks = useSelector(state => state.taskReducer.tabTasks)
     return (
         <div className={classes.root}>
-            {tabTasks.map((item) => <Task item={item} key={item.id} />)}
+            {filteredTask.map((item) => <Task item={item} key={item.id} />)}
         </div>
     )
 }
